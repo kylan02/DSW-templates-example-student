@@ -2,7 +2,7 @@ from flask import Flask, url_for, render_template
 
 app = Flask(__name__)
 
-@app.route("/") #annotation tells the url that will make this function run
+@app.route("/")
 def render_main():
     return render_template('home.html')
 
@@ -15,4 +15,4 @@ def render_page2():
     return render_template('page2.html')
     
 if __name__=="__main__":
-    app.run(debug=False, port=54321)
+    app.run(debug=False)
